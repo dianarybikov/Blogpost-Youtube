@@ -4,7 +4,7 @@ import './App.css';
 function App() {
 
   const [pirates, setPirates] = useState([])
-  
+
   useEffect( () =>{
     fetch('http://localhost:3000/pirates')
     .then (response => response.json())
@@ -12,7 +12,7 @@ function App() {
   })
   return (
     <div className="App">
-      
+      <PiratesContainer pirates={pirates}/>
     </div>
   );
 }
